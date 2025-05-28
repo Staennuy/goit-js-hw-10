@@ -1,29 +1,79 @@
-.back-link {
-  position: relative;
-  display: inline-block;
-  padding: 4px 8px;
-  margin-top: 32px;
-  border: 1px solid;
-  border-radius: 8px;
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #2e2f42;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
-.back-link::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 16px;
-  height: 16px;
+.form {
+  max-width: 360px;
+}
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z'/%3E%3C/svg%3E");
-  transition: 300ms ease-in;
-  transition-property: opacity;
-  opacity: 0;
-  animation: slide 500ms linear infinite alternate-reverse both;
-  animation-play-state: paused;
+.form > label {
+  display: flex;
+  flex-direction: column;
 }
-.back-link:hover::before {
-  opacity: 1;
-  animation-play-state: running;
+
+[name='delay'] {
+  margin-top: 8px;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #2e2f42;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  &:hover {
+    border-color: #000;
+  }
+  &:focus {
+    border-color: #4e75ff;
+  }
+}
+
+fieldset {
+  display: flex;
+  padding: 14px 28px 8px;
+  margin: 16px 0 0 0;
+  justify-content: space-around;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  &:hover {
+    border-color: #000000;
+  }
+  &:active {
+    border-color: #000000;
+  }
+}
+fieldset > label {
+  display: flex;
+  align-items: center;
+}
+[name='state'] {
+  width: 20px;
+  height: 20px;
+  margin: 6px 8px 6px 0;
+}
+
+button {
+  font-family: Montserrat;
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin-top: 24px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #4e75ff;
+  transition: background-color 0.3s;
+  &:hover {
+    background: #6c8cff;
+  }
 }
